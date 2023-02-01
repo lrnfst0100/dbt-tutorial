@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: weathersource-com
+    description: "weahter and crime stats from chicago"
+    database: weathersource-com
+    schema: pub_weather_data_samples
+    tables:
+      - name: sample_weather_and_crime_comparison_chicago_daily_2016
+    tests:
+      - not_null
+  - name: bigquery-public-data
+    description: "weahter and crime stats from chicago"
+    database: bigquery-public-data
+    schema: chicago_taxi_trips
+    tables:
+      - name: taxi_trips
+      
